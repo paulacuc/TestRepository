@@ -48,11 +48,6 @@
                         <display value="Privatpraktiserende spesialister"/>
                         <definition value="Leger og psykologer"/>
                     </concept>
-                    <concept>
-                        <code value="28"/>
-                        <display value="Fastlege/primærlege/legevaktslege"/>
-                        <definition value="Primærhelsetjeneste"/>
-                    </concept>        
                 </define>
             </ValueSet>            
         </resource>
