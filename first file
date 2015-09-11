@@ -25,24 +25,9 @@
                     <caseSensitive value="true" />
                     <concept>
                         <code value="1" />
-                        <display value="Pasienten selv" />
-                        <definition value="Pasienten selv" />            
+                        <display value="Webhook is working" />
+                        <definition value="Webhook is working" />            
                     </concept>        
-                    <concept>
-                        <code value="41" />
-                        <display value="Somatisk spesialisthelsetjeneste" />
-                        <definition value="Somatisk spesialisthelsetjeneste" />            
-                    </concept>
-                    <concept>
-                        <code value="42" />
-                        <display value="Tverrfaglig spesialisert rusbehandling"/>
-                        <definition value="Tverrfaglig spesialisert rusbehandling"/>
-                    </concept>
-                    <concept>
-                        <code value="44"/>
-                        <display value="Psykisk helsevern"/>
-                        <definition value="inkludert DPS"/>
-                    </concept>
                 </define>
             </ValueSet>            
         </resource>
