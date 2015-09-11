@@ -44,9 +44,9 @@
                         <definition value="inkludert DPS"/>
                     </concept>
                     <concept>
-                        <code value="10"/>
-                        <display value="Privatpraktiserende spesialister"/>
-                        <definition value="Leger og psykologer"/>
+                        <code value="11"/>
+                        <display value="Paula"/>
+                        <definition value="Paula"/>
                     </concept>
                 </define>
             </ValueSet>            
