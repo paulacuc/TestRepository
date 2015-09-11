@@ -43,11 +43,6 @@
                         <display value="Psykisk helsevern"/>
                         <definition value="inkludert DPS"/>
                     </concept>
-                    <concept>
-                        <code value="11"/>
-                        <display value="Paula"/>
-                        <definition value="Paula"/>
-                    </concept>
                 </define>
             </ValueSet>            
         </resource>
