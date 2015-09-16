@@ -25,8 +25,8 @@
                     <caseSensitive value="true" />
                     <concept>
                         <code value="1" />
-                        <display value="Is working" />
-                        <definition value="Is working" />            
+                        <display value="Test" />
+                        <definition value="Test" />            
                     </concept>        
                 </define>
             </ValueSet>            
