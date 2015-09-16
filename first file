@@ -25,8 +25,8 @@
                     <caseSensitive value="true" />
                     <concept>
                         <code value="1" />
-                        <display value="Webhook is working" />
-                        <definition value="Webhook is working" />            
+                        <display value="Is working" />
+                        <definition value="Is working" />            
                     </concept>        
                 </define>
             </ValueSet>            
