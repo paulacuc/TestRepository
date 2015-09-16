@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bundle xmlns="http://hl7.org/fhir">
+    <type value="collection"/>
+    <entry>
+        <resource>
+            <ValueSet xmlns="http://hl7.org/fhir">
+                <id value="rekvirenttype" />
+                <url value="http://hl7.no/fhir/ValueSet/paulatest" />
+                <version value="0.1"/>
+                <name value="PaulaTest"/>
+                <useContext>
+                    <coding>
+                        <system value="urn:iso:std:iso:3166" />
+                        <code value="no"/>
+                    </coding>
+                </useContext>
+                <publisher value="HL7 Norge"/>
+                <description value="paulatest" />
+                <status value="draft" />
+                <date value="2015-06-01"/>
+                <define>
+                    <system value="http://hl7.no/fhir/paulatest"/>
+                    <caseSensitive value="true" />
+                    <concept>
+                        <code value="1" />
+                        <display value="Paula Test" />
+                        <definition value="Paula Test" />            
+                    </concept>        
+                </define>
+            </ValueSet>            
+        </resource>
+    </entry>
+</Bundle>
