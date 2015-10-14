@@ -4,7 +4,7 @@
     <entry>
         <resource>
             <ValueSet xmlns="http://hl7.org/fhir">
-                <id value="rekvirenttype" />
+                <id value="" />
                 <version value="0.1"/>
                 <name value="Rekvirenttype"/>
                 <useContext>
