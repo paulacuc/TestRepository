@@ -15,7 +15,7 @@
                 <publisher value="HL7 Norge"/>
                 <description value="Ulalala it works!!!. 
                     Codes from this valueset are both kinds of practitioners (privatpraktiserende spesialister, fastlege) or 
-                    kinds of organizations the practitionedddr works for (kommunale tjenester, psykisk helsevern)." />
+                    kinds of organizations the practitioner works for (like kommunale tjenester, psykisk helsevern)." />
                 <status value="draft" />
                 <date value="2015-06-01"/>
                 <define>
