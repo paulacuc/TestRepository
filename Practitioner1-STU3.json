@@ -1,0 +1,54 @@
+{
+        "resourceType": "Practitioner",
+        "id": "6800",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2017-01-06T13:59:12.994-05:00",
+          "profile": [
+            "http://hl7.org/fhir/StructureDefinition/daf-pract"
+          ]
+        },
+        "identifier": [
+          {
+            "system": "urn:oid:2.16.840.1.113883.4.6",
+            "value": "66666"
+          },
+          {
+            "system": "urn:oid:2.16.840.1.113883.4.823.1",
+            "value": "20130607100800-McBeeID"
+          },
+          {
+            "system": "urn:oid:2.16.840.1.113883.9.9.9",
+            "value": "Roger.McBee@direct.max.md"
+          }
+        ],
+        "name": [
+          {
+            "use": "usual",
+            "family": "McBee",
+            "given": [
+              "Roger",
+              "Rienman"
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+1(301)111-1111",
+            "use": "home"
+          }
+        ],
+        "address": [
+          {
+            "use": "home",
+            "line": [
+              "1111 StreetName St."
+            ],
+            "city": "Silver Spring",
+            "state": "IL",
+            "postalCode": "20901",
+            "country": "US"
+          }
+        ]
+      }
