@@ -1,0 +1,48 @@
+{
+        "resourceType": "Patient",
+        "id": "47499",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2017-03-22T16:15:15.215-04:00"
+        },
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n\t\t\t<p>\n\t\t\t\t<b>Generated Narrative with Details</b>\n\t\t\t</p>\n\t\t\t<p>\n\t\t\t\t<b>identifier</b>: HOSP-CD14D9 (USUAL)</p>\n\t\t\t<p>\n\t\t\t\t<b>name</b>: Todd G. Lerr (OFFICIAL)</p>\n\t\t\t<p>\n\t\t\t\t<b>gender</b>: male</p>\n\t\t\t<p>\n\t\t\t\t<b>birthDate</b>: Jun 7, 2012</p>\n\t\t\t<p>\n\t\t\t\t<b>deceased</b>: false</p>\n\t\t\t<p>\n\t\t\t\t<b>address</b>: 123 North 102nd Street Apt 4d Harrisburg PA 17102 USA (HOME)</p>\n\t\t</div>"
+        },
+        "identifier": [
+          {
+            "use": "usual",
+            "system": "http://happyvalley.com/patient",
+            "value": "HOSP-CD14D9"
+          }
+        ],
+        "name": [
+          {
+            "use": "official",
+            "family": "Lerr",
+            "given": [
+              "Todd",
+              "G."
+            ],
+            "suffix": [
+              "Jr"
+            ]
+          }
+        ],
+        "gender": "male",
+        "birthDate": "2012-06-07",
+        "deceasedBoolean": false,
+        "address": [
+          {
+            "use": "home",
+            "line": [
+              "123 North 102nd Street",
+              "Apt 4d"
+            ],
+            "city": "Harrisburg",
+            "state": "PA",
+            "postalCode": "17102",
+            "country": "USA"
+          }
+        ]
+}
