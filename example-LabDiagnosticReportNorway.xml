@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DiagnosticReport xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://hl7.org/fhir ../../../../Users/Marten.FURORENT/OneDrive/FHIR/Schemas/DSTU2/diagnosticreport.xsd"
+ xmlns="http://hl7.org/fhir">
+    <!-- A list of all contained resources -->
+    <id value = "exampleLabDiagnosticReportNorway"/>
+    <meta>
+        <profile value="http://hl7.no/fhir/StructureDefinition/LabDiagnosticReportNorway"></profile>
+    </meta>
+    <contained>
+        <Patient>
+            <id value = "examplePatient"/>
+            <meta>
+                <profile value="http://hl7.no/fhir/StructureDefinition/LabPatientNorway"></profile>
+            </meta>
+            <!-- Unique identifier for the patient. -->
+            <identifier>
+                <system value = "http://furore.com/NamingSystem/PatientIdentifier"/>
+                <value value= "123456789AB"/>
+            </identifier>
+            <name>
+                <family value="Duck"/>
+                <given value="Donald"/>
+            </name>
+        </Patient>
+    </contained>
+    <contained>
+        <Organization>
+            <id value = "exampleOrganization"/>
+            <meta>
+                <profile value="http://hl7.no/fhir/StructureDefinition/LabOrganizationNorway"></profile>
+            </meta>
+            <identifier>
+                <system value="http://furore.com/NamingSystem/OrganizationID"/>     
+                <value value="974707152"/>
+            </identifier>
+            <name value = "Ducktown Medical Center"/>
+        </Organization>
+    </contained>
+    <!-- Status of the diagnostic report as a whole. -->
+    <status value = "final"></status>
+    <code>
+        <coding>
+            <system value="http://loinc.org"/>
+            <code value="57698-3"/>
+            <display value="Lipid panel with direct LDL - Serum or Plasma"/>            
+        </coding>
+    </code>
+    <subject>
+        <reference value="#examplePatient"/>
+    </subject>
+    <!-- EffectiveDateTime refers to the date and time of measurement. -->
+    <effectiveDateTime value = '2016-01-01T10:53:00'/>
+    <!-- Issued refers to the date and time this observation was made available to providers, typically after the results have been reviewed and verified. -->
+    <issued value = '2016-05-01T16:17:00'/>
+    <!-- Performer references to the organization/hospital where the measurement was done or the practitioner who performed the
+        measurement. In the diagnostic report is not possible to provide both. -->
+    <performer>
+        <reference value="#exampleOrganization"/>
+    </performer>
+    <!-- Observations that are part of this diagnostic report. -->
+    <result>
+        <reference value="Observation/exampleLabObservationNorway"/>
+    </result>
+    <result>
+        <reference value="Observation/exampleLabObservationNorway2"/>
+    </result>
+</DiagnosticReport>

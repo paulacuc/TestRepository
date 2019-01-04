@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Observation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://hl7.org/fhir ../../../../Users/Marten.FURORENT/OneDrive/FHIR/Schemas/DSTU2/observation.xsd"
+    xmlns="http://hl7.org/fhir">
+    <id value = "exampleLabObservationNorway"/>
+    <meta>
+        <profile value="http://hl7.no/fhir/StructureDefinition/LabObservationNorway"></profile>
+    </meta>
+    <!-- A list of all contained resources -->
+    <contained>
+        <Patient>
+            <id value = "examplePatient"/>
+            <meta>
+                <profile value="http://hl7.no/fhir/StructureDefinition/LabPatientNorway"></profile>
+            </meta>
+            <!-- Unique identifier for the patient. -->
+            <identifier>
+                <system value = "http://furore.com/NamingSystem/PatientIdentifier"/>
+                <value value= "123456789AB"/>
+            </identifier>
+            <name>
+                <family value="Duck"/>
+                <given value="Donald"/>
+            </name>
+        </Patient>
+    </contained>
+    <contained>
+        <Organization>
+            <id value = "exampleOrganization"/>
+            <meta>
+                <profile value="http://hl7.no/fhir/StructureDefinition/LabOrganizationNorway"></profile>
+            </meta>
+            <identifier>
+                <system value="http://furore.com/NamingSystem/OrganizationID"/>     
+                <value value="974707152"/>
+            </identifier>
+            <name value = "Ducktown Medical Center"/>
+        </Organization>
+    </contained>
+    <contained>
+        <Organization>
+            <id value = "examplePractitioner"/>
+            <meta>
+                <profile value="http://hl7.no/fhir/StructureDefinition/LabPractitionerNorway"></profile>
+            </meta>
+            <!-- Either the name or at least one identifier of the practitioner has to be provided. -->
+            <identifier>
+                <!-- In this example the HPR number is provided. The rekvirent code can also be provided. -->
+                <system value="http://furore.com/NamingSystem/CareProviderID"/>     
+                <value value="1234567"/>
+            </identifier>
+            <name value = "Dr. Mouse"/>
+        </Organization>
+    </contained>
+    <!-- Status of the observation. -->
+    <status value = "final"></status>
+    <!--  Code describes what was observed. Sometimes this is called the observation "name". -->
+    <code>
+        <coding>
+            <!-- In this profile the NLK coding system is used. The value of system is a fixed value. -->
+            <system value="http://loinc.org"/>
+            <code value="13457-7"/>
+            <display value="LDL Cholesterol (Calc)	"/>
+        </coding>
+    </code>
+    <!-- Subject references to the patient whose lab result is described by the observation and into whose record the observation is placed. -->
+    <subject>
+        <reference value="#examplePatient"/>
+    </subject>
+    <!-- EffectiveDateTime refers to the date and time of measurement. -->
+    <effectiveDateTime value="2016-01-01T10:53:00"/>
+    <!-- Issued refers to the date and time this observation was made available to providers, typically after the results have been reviewed and verified. -->
+    <issued value="2016-01-05T16:17:00"/>
+    <!-- Performer references to the organization/hospital where the measurement was done or the practitioner who performed the
+        measurement. It is also possible to provide both. -->
+    <performer>
+        <reference value="#exampleOrganization"/>
+    </performer>
+    <performer>
+        <reference value="#examplePractitioner"/>
+    </performer>
+    <!-- valueQuantity contains the information determined as a result of making the observation, if the information has a simple value. 
+    It is also possible to use the element valueString if the result is stored as a text value. -->
+    <valueQuantity>
+        <value value="1.3"/>
+        <unit value="mmol/L"/>
+        <system value="http://unitsofmeasure.org"/>
+        <code value="mmol/L"/>
+    </valueQuantity>
+    <!-- Specimen references to the specimen that is used to obtain the sample. -->
+    <interpretation>
+        <text value="normal"></text>
+    </interpretation>
+    <referenceRange>
+        <high>
+            <value value="3"/>
+            <unit value="mmol/L"/>
+            <system value="http://unitsofmeasure.org"/>
+            <code value="mmol/L"/>
+        </high>
+    </referenceRange>
+</Observation>

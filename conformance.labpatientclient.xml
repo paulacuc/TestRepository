@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--[converter] Converted to FHIR DSTU2 v1.0-->
+<Conformance
+    xsi:schemaLocation="http://hl7.org/fhir file:/C:/Users/Marten.FURORENT/OneDrive/FHIR/Schemas/DSTU2/conformance.xsd"
+    xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <url value="http://hl7.no/fhir/Conformance/LabPatientPractitionerClient"/>
+    <name value="Lab Patient/Practitioner Client"/>
+    <publisher value="HL7 Norway"/>
+    <date value="2015-06-02"/>
+    <description
+        value="The `Lab Norway` actor queries lab data in the Norwegian context. `Lab Norway Clients` are expected to use this functionality to allow end users to search for lab results by patient, type of result, status or timeframe. "/>
+    <requirements
+        value="A `Lab Norway` actor:                  * SHALL communicate with the server according to the [FHIR DSTU2 REST specification][fhir-rest].          * SHALL use either the XML or JSON resource formats for all interactions."
+    />
+    <kind value="requirements"/>
+    <fhirVersion value="1.0.1"/>
+    <acceptUnknown value="no"/>
+    <format
+        value="application/xml+fhir"/><format value="application/json+fhir"/><rest>
+            <mode value="client"/>
+            <!-- LabObservationNorway -->
+            <resource>
+                <type value="Observation"/>
+                <profile>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/conformance-common-expectation">
+                        <valueCode value="SHOULD"/>
+                    </extension>
+                    <reference value="http://hl7.no/fhir/StructureDefinition/LabObservationNorway"/>
+                </profile>
+                <!-- Interactions -->
+                <interaction>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/conformance-common-expectation">
+                        <valueCode value="SHOULD"/>
+                    </extension>
+                    <code value="read"/>
+                </interaction>
+                <interaction>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/conformance-common-expectation">
+                        <valueCode value="SHOULD"/>
+                    </extension>
+                    <code value="vread"/>
+                </interaction>
+                <interaction>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/conformance-common-expectation">
+                        <valueCode value="SHOULD"/>
+                    </extension>
+                    <code value="history-type"/>
+                </interaction>
+                <!-- Search parameters -->
+                <searchParam>
+                    <name value="patient"/>
+                    <definition value="http://hl7.org/fhir/SearchParameter/observation-patient"/>
+                    <type value="reference"/>
+                    <documentation value="The subject (patient) that the observation is about"/>
+                </searchParam>
+                <searchParam>
+                    <name value="code"/>
+                    <definition value="http://hl7.org/fhir/SearchParameter/observation-code"/>
+                    <type value="token"/>
+                    <documentation value="The code of the observation type"/>
+                </searchParam>
+                <searchParam>
+                    <name value="category"/>
+                    <definition value="http://hl7.org/fhir/SearchParameter/observation-category"/>
+                    <type value="token"/>
+                    <documentation value="The classification of the type of observation"/>
+                </searchParam>
+                <searchParam>
+                    <name value="status"/>
+                    <definition value="http://hl7.org/fhir/SearchParameter/observation-status"/>
+                    <type value="token"/>
+                    <documentation value="The status of the observation"/>
+                </searchParam>
+                <searchParam>
+                    <name value="date"/>
+                    <definition value="http://hl7.org/fhir/SearchParameter/observation-date"/>
+                    <type value="date"/>
+                    <documentation value="Obtained date/time."/>
+                </searchParam> 
+                <searchParam>
+                    <name value="_lastUpdated"/>
+                    <definition value="http://hl7.org/fhir/SearchParameter/resource-lastUpdated"/>
+                    <type value="date"/>
+                    <documentation value="When the resource version last changed"/>
+                </searchParam>
+            </resource>
+            <!-- LabDiagnosticReportNorway -->
+            <resource>
+                <type value="DiagnosticReport"/>
+                <profile>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/conformance-common-expectation">
+                        <valueCode value="SHOULD"/>
+                    </extension>
+                    <reference value="http://hl7.no/fhir/StructureDefinition/LabDiagnosticReport"/>
+                </profile>
+                <!-- Interactions -->
+                <interaction>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/conformance-common-expectation">
+                        <valueCode value="SHOULD"/>
+                    </extension>
+                    <code value="read"/>
+                </interaction>
+                <interaction>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/conformance-common-expectation">
+                        <valueCode value="SHOULD"/>
+                    </extension>
+                    <code value="vread"/>
+                </interaction>
+                <interaction>
+                    <extension url="http://hl7.org/fhir/StructureDefinition/conformance-common-expectation">
+                        <valueCode value="SHOULD"/>
+                    </extension>
+                    <code value="history-type"/>
+                </interaction>
+                <!-- Search parameters -->
+                <searchParam>
+                    <name value="patient"/>
+                    <definition value="http://hl7.org/fhir/SearchParameter/diagnosticreport-patient"/>
+                    <type value="reference"/>
+                    <documentation value="The subject (patient) of the report"/>
+                </searchParam>
+                <searchParam>
+                    <name value="issued"/>
+                    <definition value="http://hl7.org/fhir/SearchParameter/diagnosticreport-issued"/>
+                    <type value="date"/>
+                    <documentation value="When the report was issued"/>
+                </searchParam>
+                <searchParam>
+                    <name value="status"/>
+                    <definition value="http://hl7.org/fhir/SearchParameter/diagnosticreport-status"/>
+                    <type value="token"/>
+                    <documentation value="The status of the report"/>
+                </searchParam>
+                <searchParam>
+                    <name value="date"/>
+                    <definition value="http://hl7.org/fhir/SearchParameter/diagnosticreport-date"/>
+                    <type value="date"/>
+                    <documentation value="The clinically relevant time of the report"/>
+                </searchParam>
+                <searchParam>
+                    <name value="_lastUpdated"/>
+                    <definition value="http://hl7.org/fhir/SearchParameter/resource-lastUpdated"/>
+                    <type value="date"/>
+                    <documentation value="When the resource version last changed"/>
+                </searchParam>
+            </resource>
+        </rest></Conformance>
+
