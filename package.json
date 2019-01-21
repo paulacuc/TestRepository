@@ -1,0 +1,9 @@
+{
+    "name": "grahame.package",
+    "version": "1.0.1",
+    "description": "This is it",
+    "dependencies": {"Core.Stu3":"3.0.0"},
+    "devDependencies": {"Shit":"1.0.1"},
+    "canonicals": null
+  }
+  
