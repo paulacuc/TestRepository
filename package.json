@@ -1,5 +1,5 @@
 {
-    "name": "grahame.package",
+    "name": "grahame1.package",
     "version": "1.0.1",
     "description": "This is it",
     "dependencies": {"Core.Stu3":"3.0.0"},
